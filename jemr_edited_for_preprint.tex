@@ -1,0 +1,32 @@
+% JEMR-specific definitions
+% edited to use as a preprint without implying JEMR publication
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\makeatletter
+\renewcommand*{\addperi}[1]{#1.~}
+
+\renewcommand{\section}{\@startsection {section}{1}{24pt}%
+{12pt}{12pt}%
+{\centering\normalfont\large}}
+
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}%
+{6pt}{6pt}%
+{\normalfont\normalsize\itshape}}
+
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{24pt}%
+{\parskip}%
+{-\parskip}%
+{\normalfont\normalsize\itshape\bfseries\addperi}}
+
+\makeatother
+
+% header on first page
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyhead[L]{\small
+Preprint\\
+1-\jemrLastPage}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
